@@ -1,6 +1,7 @@
 # Vet-Clinic
 
 > The initial data structure for a vet clinic uses a PostgreSQL relational database. Create a table to store animals' information, some data inserted into it, and queries performed.
+> Update and delete records using transactions and GROUP BY to answer analytical questions.
 
 
 ## Built With
