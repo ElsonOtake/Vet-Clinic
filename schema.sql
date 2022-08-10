@@ -12,3 +12,22 @@ CREATE TABLE animals (
 );
 
 ALTER TABLE animals ADD species varchar(100);
+
+CREATE TABLE owners (
+  id integer GENERATED ALWAYS AS IDENTITY,
+  full_name varchar(100) NOT NULL,
+  age integer,
+  PRIMARY KEY(id)
+);
+
+CREATE TABLE species (
+  id integer GENERATED ALWAYS AS IDENTITY,
+  name varchar(100) NOT NULL,
+  PRIMARY KEY(id)
+);
+
+ALTER TABLE animals DROP COLUMN species;
+
+ALTER TABLE animals ADD COLUMN species_id integer REFERENCES species (id);
+
+ALTER TABLE animals ADD COLUMN owner_id integer REFERENCES owners (id);
