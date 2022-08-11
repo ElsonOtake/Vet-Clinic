@@ -50,5 +50,5 @@ CREATE TABLE visits (
   vet_id integer REFERENCES vets (id),
   animal_id integer REFERENCES animals (id),
   date_of_visit date,
-  PRIMARY KEY (vet_id, animal_id)
+  PRIMARY KEY (vet_id, animal_id, date_of_visit)
 );
