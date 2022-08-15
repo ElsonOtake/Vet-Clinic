@@ -52,3 +52,7 @@ CREATE TABLE visits (
   date_of_visit date,
   PRIMARY KEY (vet_id, animal_id, date_of_visit)
 );
+
+ALTER TABLE owners ADD COLUMN email VARCHAR(120);
+
+ALTER TABLE visits ALTER COLUMN date_of_visit TYPE timestamp;
