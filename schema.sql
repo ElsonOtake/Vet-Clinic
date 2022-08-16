@@ -10,7 +10,6 @@ CREATE TABLE animals (
   neutered boolean,
   weight_kg decimal
 );
-
 ALTER TABLE animals ADD species varchar(100);
 
 CREATE TABLE owners (
@@ -52,3 +51,15 @@ CREATE TABLE visits (
   date_of_visit date,
   PRIMARY KEY (vet_id, animal_id, date_of_visit)
 );
+
+ALTER TABLE owners ADD COLUMN email VARCHAR(120);
+
+ALTER TABLE visits ALTER COLUMN date_of_visit TYPE timestamp;
+
+CREATE INDEX animal_id_asc ON visits(animal_id ASC);
+
+CREATE INDEX vet_id_asc ON visits(vet_id ASC);
+
+DROP INDEX vet_id_asc;
+
+CREATE INDEX email_asc ON owners(email ASC);

@@ -2,7 +2,7 @@
 
 > The initial data structure for a vet clinic uses a PostgreSQL relational database. Create a table to store animals' information, some data inserted into it, and queries performed.
 Update and delete records using transactions and GROUP BY to answer analytical questions.
-Use primary & foreign keys mechanisms for joining tables. Query multiple tables. Add many to many relationships.
+Use primary & foreign keys mechanisms for joining tables. Query multiple tables. Add many to many relationships. Solve some performance issue.
 
 
 ## Built With
@@ -26,6 +26,12 @@ This repository includes files with plain SQL that can be used to recreate a dat
 - GitHub: [elsonotake](https://github.com/elsonotake)
 - Twitter: [@elsonotake](https://twitter.com/elsonotake)
 - LinkedIn: [elsonotake](https://linkedin.com/in/elsonotake)
+
+👤 **Achike Chuma Edward**
+
+- GitHub: [@chumaachike](https://github.com/chumaachike)
+- Twitter: [@AchikeChuma](https://twitter.com/AchikeChuma)
+- LinkedIn: [Edward Achike](https://www.linkedin.com/in/edwardachike/)
 
 
 ## 🤝 Contributing
