@@ -64,3 +64,7 @@ CREATE INDEX vet_id_asc ON visits(vet_id ASC);
 DROP INDEX vet_id_asc;
 
 CREATE INDEX email_asc ON owners(email ASC);
+
+ALTER TABLE owners DROP COLUMN email;
+
+ALTER TABLE visits ALTER COLUMN date_of_visit TYPE date;
