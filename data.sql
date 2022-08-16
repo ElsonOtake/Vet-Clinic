@@ -201,3 +201,9 @@ INSERT INTO visits (animal_id, vet_id, date_of_visit)
 
 INSERT INTO owners (full_name, email)
   SELECT 'Owner ' || generate_series(1,5000000), 'owner_' || generate_series(1,5000000) || '@mail.com';
+
+DELETE FROM owners WHERE full_name LIKE 'Owner%';
+
+DELETE FROM visits;
+
+-- INSERT INTO visits (above)
