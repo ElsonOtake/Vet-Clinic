@@ -15,6 +15,8 @@ CREATE TABLE medical_histories (
   PRIMARY KEY(id)
 );
 
+CREATE INDEX ON medical_histories (patient_id);
+
 CREATE TABLE invoices (
   id integer GENERATED ALWAYS AS IDENTITY,
   total_amount DECIMAL NOT NULL,
@@ -23,6 +25,8 @@ CREATE TABLE invoices (
   medical_history_id INT NOT NULL REFERENCES medical_histories(id),
   PRIMARY KEY (id)
 );
+
+CREATE INDEX ON invoices (medical_history_id);
 
 CREATE TABLE treatments (
   id integer GENERATED ALWAYS AS IDENTITY,
@@ -41,8 +45,14 @@ CREATE TABLE invoice_items (
   PRIMARY KEY (id)
 );
 
+CREATE INDEX ON invoice_items (invoice_id);
+CREATE INDEX ON invoice_items (treatment_id);
+
 CREATE TABLE medical_treatments (
   medical_id integer REFERENCES medical_histories(id),
   treatment_id integer REFERENCES treatments(id),
   PRIMARY KEY (medical_id, treatment_id)
 );
+
+CREATE INDEX ON medical_treatments (medical_id);
+CREATE INDEX ON medical_treatments (treatment_id);
